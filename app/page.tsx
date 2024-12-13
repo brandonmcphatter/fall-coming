@@ -1,25 +1,29 @@
 import HeroSection from "@/Sections/HeroSection";
 import MusicSection from "@/Sections/MusicSection";
+import NavBar from "@/Sections/NavBar";
 
 export default function Home() {
-  return (
-   <div className={''}>
-    <main className={' '}>
+    return (
+        <div className={'mx-auto md:max-w-[75%] xl:max-w-[50%]'}>
 
-      {/*Fall Coming Hero Section*/}
-      <HeroSection />
+            <NavBar/>
 
-      {/*Music Section*/}
-      <MusicSection />
+            <main className={'px-4 md:px-0'}>
 
+                {/*Fall Coming Hero Section*/}
+                <HeroSection/>
 
-    </main>
-     <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
+                {/*Music Section*/}
+                <MusicSection/>
 
-     </footer>
+            </main>
 
-    </div>
-  );
+            <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center pb-6">
+                <p className={'text-sm'}>Footer 2025</p>
+            </footer>
+
+        </div>
+    );
 }
 
 
