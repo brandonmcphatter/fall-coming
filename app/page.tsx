@@ -1,20 +1,22 @@
-import HeroSection from "@/Sections/HeroSection";
-import MusicSection from "@/Sections/MusicSection";
-import NavBar from "@/Sections/NavBar";
+import HeroSection from "@/Sections/HeroSection/HeroSection";
+import MusicSection from "@/Sections/MusicSection/MusicSection";
+import BlogSection from "@/Sections/BlogSection/BlogSection";
+import NavBar from "@/Sections/HeroSection/NavBar";
 
 export default function Home() {
     return (
-        <div className={'mx-auto md:max-w-[75%] xl:max-w-[50%]'}>
+        <div className={'mx-auto md:max-w-[85%] xl:max-w-[50%]'}>
 
-            <NavBar/>
-
-            <main className={'px-4 md:px-0'}>
+            <main className={'px-4 md:px-0 '}>
+                <NavBar/>
 
                 {/*Fall Coming Hero Section*/}
                 <HeroSection/>
 
                 {/*Music Section*/}
                 <MusicSection/>
+
+                <BlogSection/>
 
             </main>
 
