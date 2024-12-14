@@ -2,7 +2,7 @@ import 'animate.css';
 
 export default function HeroSection() {
     return (
-        <section className={'h-svh flex-col justify-center items-center content-center '}>
+        <section id={'hero'} className={'h-svh flex-col justify-center  content-center items-stretch'}>
 
             {/*Main Text*/}
             <div className={' flex flex-col lg:flex-row justify-center text-8xl mx-4 mb-3'}>
