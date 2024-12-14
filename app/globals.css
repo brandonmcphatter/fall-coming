@@ -2,9 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
-li  {
+.navItem  {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: .5rem;
+}
+
+.albumCover {
+    width:100%;
+    aspect-ratio: 1/1;
+    background-color: lightgray;
+    position: relative;
+}
+
+.blogCard {
+    width:100%;
+    aspect-ratio: 1/1;
+    background-color: lightgray;
+    position: relative;
 }
