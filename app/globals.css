@@ -19,6 +19,14 @@
 .blogCard {
     width:100%;
     aspect-ratio: 1/1;
-    background-color: lightgray;
+    background-color: tan;
     position: relative;
+}
+
+.musicPlayerBar {
+    background-color: rgba(211, 211, 211, 0.6);
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
 }
