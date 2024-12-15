@@ -7,10 +7,10 @@ type AlbumItemProps = {
 
 export default function AlbumItem({cover, title}: AlbumItemProps ) {
     return (
-        <div className={'rounded border hover:border-2 border-gray-500'}>
+        <div className={'rounded border hover:border-2'}>
             {/*Album Cover*/}
             <div className={'albumCover rounded'}>
-                <Image className={' hover:cursor-pointer'} src={cover? cover : 'https://picsum.photos/200'}
+                <Image className={' hover:cursor-pointer'} src={cover? cover : 'https://picsum.photos/300'}
                        alt={'Album Cover'} fill={true}/>
             </div>
             {/*Album Info*/}
