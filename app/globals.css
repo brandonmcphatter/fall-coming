@@ -25,7 +25,7 @@
 
 .musicPlayerBar {
     background-color: rgba(211, 211, 211, 0.6);
-    padding: 1rem 0;
+    padding: 1rem 2rem;
     position: fixed;
     width: 100%;
     bottom: 0;
