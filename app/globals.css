@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+    background: rgb(21,29,54);
+    background: linear-gradient(340deg, rgba(21,29,54,1) 0%, rgba(111,109,140,1) 30%, rgba(173,105,124,1) 50%, rgba(191,126,103,1) 76%, rgba(136,80,67,1) 100%);
+    color: #c1c1c1;
+}
+
 .navItem  {
     display: flex;
     justify-content: center;
@@ -14,6 +20,10 @@
     aspect-ratio: 1/1;
     background-color: lightgray;
     position: relative;
+}
+
+.albumCover:hover {
+    border: lightgray 2px solid;
 }
 
 .blogCard {
