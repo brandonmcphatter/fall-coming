@@ -11,7 +11,7 @@ export default function HeroSection() {
                     Fall
                 </div>
                 <div className={'text-center tracking-wider md:ps-20 lg:ps-0 animate__animated animate__fadeIn animate__slower animate__delay-3s'} >
-                    Coming
+                   <span className={''}> Coming</span>
                 </div>
 
             </div>
