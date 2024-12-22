@@ -10,10 +10,11 @@ export default function AlbumView() {
 
     return (
         <section className={'px-4 md:px0 py-4 min-h-fit animate__animated animate__fadeIn'}>
-            <div className={'py-2'}>
+            <div className={'pt-2 pb-8 flex justify-between'}>
                 <button className={'border py-1 rounded px-4 hover:bg-amber-100'}
                         onClick={() => setAlbumChoice(-1)}>&#60; All Music
                 </button>
+                <button className={'border py-1 rounded px-4 hover:bg-amber-100'}>Download</button>
             </div>
             <div className={'mx-auto text-gray-300 flex flex-col gap-6 '}>
 
@@ -50,16 +51,17 @@ function TrackList({tracks, duration}: { tracks: string[], duration: number[] })
 }
 
 function TrackListItem({track, num, duration}: { track: string, num: number, duration: number }) {
-    const {setShowMusicPlayer, getTrackLength} = useContext(AlbumContext);
-    const song = {
-
+    const {setShowMusicPlayer, formatTime, currentAlbum, setCurrentSong} = useContext(AlbumContext);
+    const song = {title: track, coverArt: currentAlbum.cover, songDuration: duration};
+    const playSong = () => {
+        setCurrentSong(song);
+        setShowMusicPlayer(true);
     }
-
     return (
-        <li className={'hover:bg-gray-400 cursor-pointer'} onClick={()=>setShowMusicPlayer(true)}>
+        <li className={'hover:bg-gray-400 cursor-pointer py-1 px-2 rounded'} onClick={playSong}>
             <div className={'flex justify-between'}>
                 <div>{num}. {track}</div>
-                <div>{getTrackLength(duration)}</div>
+                <div>{formatTime(duration)}</div>
             </div>
         </li>
     )
