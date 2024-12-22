@@ -1,6 +1,8 @@
+
 import type {Metadata} from "next";
 import "./globals.css";
-import React from "react";
+import React, {useContext} from "react";
+import {AlbumContext, AlbumProvider} from "@/context/AlbumContext";
 
 export const metadata: Metadata = {
     title: "Fall Coming",
@@ -13,10 +15,13 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
+        <AlbumProvider>
         <html lang="en">
         <body >
         {children}
+
         </body>
         </html>
+        </AlbumProvider>
     );
 }
