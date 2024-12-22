@@ -11,7 +11,7 @@ type AlbumContextType = {
     showMusicPlayer: boolean;
     setShowMusicPlayer: (show: boolean) => void;
     formatTime: (duration: number | undefined) => string;
-    currentSong: { title: string, coverArt: string, songDuration: number } | null;
+    currentSong: { title: string, coverArt: string | undefined, songDuration: number } | null;
     setCurrentSong: (song: { title: string; coverArt: string | undefined; songDuration: number }) => void;
 };
 
@@ -22,14 +22,15 @@ export function AlbumProvider({children}: { children: ReactNode }) {
     const currentAlbum = albums[albumChoice] || albums[0];
     const allAlbums = albums;
     const [showMusicPlayer, setShowMusicPlayer] = useState<boolean>(false);
-    const formatTime = (duration: number) => {
+    const formatTime = (duration: number | undefined) => {
+        if (duration === undefined) return '0:00';
         const minutes = Math.floor(duration / 60);
         const seconds = duration % 60;
         return `${minutes}:${seconds < 10 ? '0' + seconds : seconds}`
     }
     const [currentSong, setCurrentSong] = useState<{
         title: string,
-        coverArt: string,
+        coverArt: string | undefined,
         songDuration: number
     } | null>(null);
 
