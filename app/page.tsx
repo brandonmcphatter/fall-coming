@@ -10,13 +10,8 @@ export default function Home() {
 
                 <main className={'px-4 md:px-0 mb-20'}>
                     <NavBar/>
-
-                    {/*Fall Coming Hero Section*/}
                     <HeroSection/>
-
-                    {/*Music Section*/}
                     <MusicSection/>
-
                     {/*<BlogSection/>*/}
 
                 </main>
