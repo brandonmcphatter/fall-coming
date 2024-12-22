@@ -25,7 +25,7 @@ export default function AlbumItem({cover, title, albumId}: AlbumItemProps ) {
                            alt={'Album Cover'} fill={true}/>
                 </div>
                 {/*Album Info*/}
-                <div className={'flex justify-between ps-1 w-fit'}>
+                <div className={'flex justify-between ps-1 mt-1 w-fit'}>
                     <span className={'hover:cursor-pointer text-sm text-gray-300'}>{title}</span>
                 </div>
             </div>
