@@ -15,7 +15,7 @@ export default function MusicPage() {
 
     return (
         <>
-            <div className={'mx-auto md:max-w-[85%] xl:max-w-[50%] min-h-screen'}>
+            <div className={'mx-auto md:max-w-[85%] xl:max-w-[60%] min-h-screen'}>
 
                 <main className={'px-4 md:px-0 mb-20'}>
                     <RegularNav/>
@@ -41,8 +41,8 @@ function AllMusicView() {
     const {allAlbums} = useContext(AlbumContext);
 
     return (
-        <section className={'px-4 md:px0 py-4 min-h-fit animate__animated animate__fadeIn'}>
-            <SectionTitle title={'Music'}/>
+        <section className={'mt-8 px-4 md:px0 py-4 min-h-fit animate__animated animate__fadeIn'}>
+
 
             <div className={'grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 md:gap-6'}>
 
