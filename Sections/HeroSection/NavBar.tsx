@@ -9,7 +9,7 @@ export default function NavBar() {
 
     return (
         <nav
-            className={' px-4 py-4 md:py-6 md:px-0 mx-auto animate__animated animate__slideInRight animate__slower animate__delay-4s relative'}>
+            className={' px-4 py-4 md:py-6 md:px-0 mx-auto animate__animated animate__slideInDown animate__slower animate__delay-4s relative'}>
             <div className={' w-full md:hidden flex flex-col items-stretch'}>
                 {/*Hamburger Icon*/}
                 <div className={' md:hidden cursor-pointer self-end pe-4'} onClick={() => setShow(!show)}>
