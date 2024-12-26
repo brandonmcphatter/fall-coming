@@ -8,11 +8,6 @@ export default function AlbumView() {
     const {currentAlbum, setAlbumChoice} = useContext(AlbumContext);
     const {title, cover, tracks, songLengths, artist} = currentAlbum;
 
-    const target = document.getElementById('album');
-    if (target) {
-        target.scrollIntoView({behavior: 'smooth'});
-    }
-
     return (
         <section id={'album'} className={'px-4 md:px0 py-4 min-h-screen animate__animated animate__fadeIn'}>
             <div className={'pt-2 pb-12 flex justify-between'}>
