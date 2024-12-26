@@ -7,7 +7,7 @@ const PrevButton = () => {
         </svg>
     )
 }
-const PlayButton = () => {
+const PauseButton = () => {
     return (
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5}
              stroke="currentColor" className="size-6">
@@ -15,7 +15,7 @@ const PlayButton = () => {
         </svg>
     )
 }
-const PauseButton = () => {
+const PlayButton = () => {
     return (
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5}
              stroke="currentColor" className="size-6">
