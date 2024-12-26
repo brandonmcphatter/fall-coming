@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Silkscreen&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=BebasNeue&display=swap');
+
 
 @tailwind base;
 @tailwind components;
@@ -43,6 +45,9 @@ body {
     bottom: 0;
 }
 
+.fall {
+    font-family: 'Bebas Neue', sans-serif;
+}
 .coming {
     font-family: 'Silkscreen', sans-serif;
 }
