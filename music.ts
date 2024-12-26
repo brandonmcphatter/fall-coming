@@ -1,5 +1,12 @@
 export const albums: ({ title: string; tracks: string[]; cover?: string; songLengths: number[]; artist: string })[] = [
     {
+        title: 'Fall Coming',
+        tracks: ['Someone', 'Right Now', 'Hi & Lo'],
+        cover: 'https://hpynsipfvbfvrjfldzjc.supabase.co/storage/v1/object/sign/Album%20Covers/FallComing.jpeg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJBbGJ1bSBDb3ZlcnMvRmFsbENvbWluZy5qcGVnIiwiaWF0IjoxNzM1MTc4MzUyLCJleHAiOjE3NjY3MTQzNTJ9._0AXGnzAEBVLGFAadT7q3OrL4ELfw1-eyouJaUifUKE&t=2024-12-26T01%3A59%3A12.098Z',
+        songLengths: [179, 149, 195],
+        artist: 'Brandon Jamall'
+    },
+    {
         title: 'Fall Coming 2',
         tracks: ['Reminisce', 'Space', 'Wasted', 'Wasted II', 'Maybe Not Freestyle', 'Mirror'],
         cover: 'https://hpynsipfvbfvrjfldzjc.supabase.co/storage/v1/object/sign/Album%20Covers/FallComing2.JPG?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJBbGJ1bSBDb3ZlcnMvRmFsbENvbWluZzIuSlBHIiwiaWF0IjoxNzM0NzM0MzczLCJleHAiOjE3NjYyNzAzNzN9.R11-M6CvaKPyguIuBcMUFhoaRR8XzJCtsjtGtViSCCI&t=2024-12-20T22%3A39%3A33.905Z',
@@ -26,12 +33,12 @@ export const albums: ({ title: string; tracks: string[]; cover?: string; songLen
         cover: 'https://hpynsipfvbfvrjfldzjc.supabase.co/storage/v1/object/sign/Album%20Covers/RunItUpCover2.JPG?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJBbGJ1bSBDb3ZlcnMvUnVuSXRVcENvdmVyMi5KUEciLCJpYXQiOjE3MzQ3MzQ3MzcsImV4cCI6MTc2NjI3MDczN30.NQfKxsTWMCgOF2Uq-Sw-y5ooskiGNPA2FsC4BtCmXkI&t=2024-12-20T22%3A45%3A37.250Z',
         songLengths: [138],
         artist: 'Brandon Jamall'
+    },{
+        title: 'FLXN',
+        tracks: ['FLXN'],
+        cover: 'https://hpynsipfvbfvrjfldzjc.supabase.co/storage/v1/object/sign/Album%20Covers/FLXNCover.JPG?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJBbGJ1bSBDb3ZlcnMvRkxYTkNvdmVyLkpQRyIsImlhdCI6MTczNTE3ODY4OCwiZXhwIjoxNzY2NzE0Njg4fQ.loIG7OqJ4VoM4GwtJldy_FnppYsDRdhjuQz5_UfzV9c&t=2024-12-26T02%3A04%3A48.018Z',
+        songLengths: [240],
+        artist: 'Brandon Jamall & Jamien Pride'
     },
-    {
-        title: 'Fall Coming',
-        tracks: ['Someone', 'Right Now', 'Hi & Lo'],
-        // missing cover
-        songLengths: [179, 149, 195],
-        artist: 'Brandon Jamall'
-    }
+
 ];
