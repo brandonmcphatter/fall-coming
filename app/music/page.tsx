@@ -4,7 +4,6 @@ import RegularNav from "@/Sections/RegularNav";
 import 'animate.css'
 import React, {useContext} from "react";
 import AlbumView from "@/Sections/MusicPage/AlbumView";
-import SectionTitle from "@/Sections/SectionTitle";
 import AlbumItem from "@/Sections/MusicSection/AlbumItem";
 import {AlbumContext} from "@/context/AlbumContext";
 import MusicPlayerBar from "@/Sections/MusicSection/MusicPlayerBar";
