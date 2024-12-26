@@ -5,13 +5,13 @@ export default function HeroSection() {
         <section id={'hero'} className={'h-screen flex-col justify-center  content-center '}>
 
             {/*Main Text*/}
-            <div className={' flex flex-col lg:flex-row justify-center text-8xl mx-4 mb-3 '}>
+            <div className={' flex flex-col lg:flex-row justify-center text-7xl md:text-8xl px-4 mb-6 '}>
 
                 <div className={'text-center lg:pe-6 md:pe-72 animate__animated animate__fadeInDownBig animate__slower'}>
                     <span className={'coming'}>Fall</span>
                 </div>
-                <div className={'text-center tracking-wide md:ps-20 lg:ps-0 animate__animated animate__fadeIn animate__slower animate__delay-3s'} >
-                   <span className={'coming'}> Coming</span>
+                <div className={' text-center md:ps-20 lg:ps-0 animate__animated animate__fadeIn animate__slower animate__delay-3s'} >
+                   <span className={'coming'}>Coming</span>
                 </div>
 
             </div>
