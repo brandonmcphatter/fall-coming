@@ -2,6 +2,7 @@
 
 import {createContext, useState, ReactNode} from 'react';
 import {albums} from '@/music';
+import {fetchSongUrl} from "@/lib/services/database";
 
 type AlbumContextType = {
     albumChoice: number;
@@ -11,11 +12,13 @@ type AlbumContextType = {
     showMusicPlayer: boolean;
     setShowMusicPlayer: (show: boolean) => void;
     formatTime: (duration: number | undefined) => string;
-    currentSong: { title: string, coverArt: string | undefined, songDuration: number } | null;
+    currentSong: { title: string, coverArt: string | undefined, songDuration: number | undefined } | null;
     setCurrentSong: (song: { title: string; coverArt: string | undefined; songDuration: number }) => void;
     getAudioDuration: (audioUrl: string) => Promise<number>;
     playing: boolean;
     setPlaying: (playing: boolean) => void;
+    trackUrl: string;
+    changeUrl: (title: string) => void;
 };
 
 export const AlbumContext = createContext<AlbumContextType>({} as AlbumContextType);
@@ -26,6 +29,8 @@ export function AlbumProvider({children}: { children: ReactNode }) {
     const allAlbums = albums;
     const [showMusicPlayer, setShowMusicPlayer] = useState<boolean>(false);
     const [playing, setPlaying] = useState<boolean>(true);
+    const [trackUrl, setTrackUrl] = useState<string>('');
+
     const formatTime = (duration: number | undefined) => {
         if (duration === undefined) return '0:00';
         const minutes = Math.floor(duration / 60);
@@ -55,6 +60,12 @@ export function AlbumProvider({children}: { children: ReactNode }) {
         });
     };
 
+    // Change trackUrl
+    function changeUrl(title: string) {
+        fetchSongUrl(title)
+            .then(r => setTrackUrl(r.track_url));
+    }
+
 
 
     return (
@@ -71,6 +82,8 @@ export function AlbumProvider({children}: { children: ReactNode }) {
             getAudioDuration,
             playing,
             setPlaying,
+            trackUrl,
+            changeUrl,
         }}>
             {children}
         </AlbumContext.Provider>
