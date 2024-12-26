@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Silkscreen&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=BebasNeue&display=swap');
 
 
 @tailwind base;
@@ -26,6 +25,13 @@ body {
     position: relative;
 }
 
+.albumViewCover {
+    width:100%;
+    aspect-ratio: 1/1;
+    background-color: lightgray;
+    position: relative;
+}
+
 .albumCover:hover {
     border: lightgray 2px solid;
 }
@@ -38,11 +44,12 @@ body {
 }
 
 .musicPlayerBar {
-    background-color: rgba(211, 211, 211, 0.6);
+    background-color: rgba(230, 79, 79, 0.31);
     padding: 1rem 2rem;
     position: fixed;
     width: 100%;
     bottom: 0;
+    backdrop-filter: blur(10px);
 }
 
 .fall {
