@@ -61,7 +61,7 @@ function TrackListItem({track, num, duration}: { track: string, num: number, dur
         changeUrl(track);
     }
     return (
-        <li className={'hover:bg-gray-400 cursor-pointer py-1 px-2 rounded'} onDoubleClick={playSong}>
+        <li className={'hover:bg-gray-400 cursor-pointer py-1 px-2 rounded'} onClick={playSong}>
             <div className={'flex justify-between'}>
                 <div className={'flex'}>{num}. {track} {track == currentSong?.title && <Play/>}</div>
                 <div>{formatTime(duration)}</div>
