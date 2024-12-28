@@ -9,7 +9,7 @@ import {NextButton, PauseButton, PlayButton, PrevButton} from "@/Sections/MusicS
 export default function MusicPlayerBar() {
 
     // context
-    const {currentSong, formatTime, playing, setPlaying, trackUrl} = useContext(AlbumContext);
+    const {currentSong, formatTime, playing, setPlaying, trackUrl, changeUrl} = useContext(AlbumContext);
 
     const audioRef = useRef<HTMLAudioElement | null>(trackUrl ? new Audio(trackUrl) : null);
     const [currentTime, setCurrentTime] = useState<number>(audioRef.current?.currentTime || 0);
@@ -44,7 +44,6 @@ export default function MusicPlayerBar() {
 
     if (audioRef.current && audioRef.current.ended) {
         setPlaying(false);
-
     }
 
     return (
