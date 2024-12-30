@@ -11,10 +11,10 @@ export default function AlbumView() {
     return (
         <section id={'album'} className={'px-4 md:px0 py-4 min-h-screen animate__animated animate__fadeIn'}>
             <div className={'pt-2 pb-12 flex justify-between'}>
-                <button className={'border py-1 rounded px-4 hover:bg-gray-500 hover:border-none'}
+                <button className={'border py-1 rounded px-4  hover:border-orange-300'}
                         onClick={() => setAlbumChoice(-1)}>&#60; All Music
                 </button>
-                <button className={'border py-1 rounded px-4 hover:bg-gray-500 hover:border-none'}>Download</button>
+                <button className={'border py-1 rounded px-4  hover:border-orange-200'}>Download</button>
             </div>
             <div className={'mx-auto text-gray-300 flex flex-col gap-6 '}>
 
@@ -51,7 +51,7 @@ function TrackList({tracks, duration}: { tracks: string[], duration: number[] })
 }
 
 function TrackListItem({track, num, duration}: { track: string, num: number, duration: number }) {
-    const {showMusicPlayer, setShowMusicPlayer, formatTime, currentAlbum, setCurrentSong, changeUrl, currentSong} = useContext(AlbumContext);
+    const {showMusicPlayer, setShowMusicPlayer, formatTime, currentAlbum, setCurrentSong, changeUrl, currentSong, setPlaying} = useContext(AlbumContext);
     const song = {title: track, coverArt: currentAlbum.cover, songDuration: duration};
     const playSong = () => {
         setCurrentSong(song);
@@ -59,11 +59,12 @@ function TrackListItem({track, num, duration}: { track: string, num: number, dur
             setShowMusicPlayer(true)
         }
         changeUrl(track);
+        setPlaying(true);
     }
     return (
         <li className={'hover:bg-gray-400 cursor-pointer py-1 px-2 rounded'} onClick={playSong}>
             <div className={'flex justify-between'}>
-                <div className={'flex'}>{num}. {track} {track == currentSong?.title && <Play/>}</div>
+                <div className={'flex gap-2 items-center'}>{num}. {track} {track == currentSong?.title && <Play/>}</div>
                 <div>{formatTime(duration)}</div>
             </div>
         </li>
