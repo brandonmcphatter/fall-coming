@@ -86,7 +86,7 @@ export default function MusicPlayerBar() {
     }
 
     return (
-        <div className={'musicPlayerBar animate__animated animate__slideInUp '}>
+        <div className={'musicPlayerBar animate__animated animate__slideInUp py-6 md:py-4 lg:py-2 px-8'}>
             <audio ref={audioRef} src={trackUrl} autoPlay={true} onTimeUpdate={updateCurrentTime}>Not Supported</audio>
             <div className={' flex justify-between items-center '}>
                 {/*Cover Art & Title*/}
