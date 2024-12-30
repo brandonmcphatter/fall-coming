@@ -9,7 +9,16 @@ import {NextButton, PauseButton, PlayButton, PrevButton} from "@/Sections/MusicS
 export default function MusicPlayerBar() {
 
     // context
-    const {currentSong, formatTime, playing, setPlaying, trackUrl, changeUrl} = useContext(AlbumContext);
+    const {
+        currentSong,
+        setCurrentSong,
+        formatTime,
+        playing,
+        setPlaying,
+        trackUrl,
+        changeUrl,
+        currentAlbum
+    } = useContext(AlbumContext);
 
     const audioRef = useRef<HTMLAudioElement | null>(trackUrl ? new Audio(trackUrl) : null);
     const [currentTime, setCurrentTime] = useState<number>(audioRef.current?.currentTime || 0);
@@ -27,6 +36,36 @@ export default function MusicPlayerBar() {
         }
         setPlaying(!playing);
     }
+
+    const prevSong = () => {
+        const previousSong = currentAlbum.tracks[currentAlbum.tracks.indexOf(currentSong?.title as string) - 1];
+        if (previousSong && currentSong && currentTime < 3) {
+            changeUrl(previousSong);
+            setPlaying(true);
+            setCurrentSong({
+                title: previousSong,
+                coverArt: currentAlbum.cover,
+                songDuration: currentAlbum.songLengths[currentAlbum.tracks.indexOf(previousSong)]
+            });
+        }
+        if (audioRef.current && currentSong && currentTime > 3) {
+            audioRef.current.currentTime = 0;
+        }
+    }
+
+    const nextSong = () => {
+        const next = currentAlbum.tracks[currentAlbum.tracks.indexOf(currentSong?.title as string) + 1];
+        if (next && currentSong) {
+            changeUrl(next);
+            setPlaying(true);
+            setCurrentSong({
+                title: next,
+                coverArt: currentAlbum.cover,
+                songDuration: currentAlbum.songLengths[currentAlbum.tracks.indexOf(next)]
+            });
+        }
+    }
+
 
     const updateCurrentTime = () => {
         if (audioRef.current) {
@@ -59,9 +98,9 @@ export default function MusicPlayerBar() {
 
                 {/*Music Controls*/}
                 <div className={'flex justify-center gap-2.5 md:gap-3 lg:gap-4'}>
-                    <div><PrevButton/></div>
+                    <div onClick={prevSong}><PrevButton/></div>
                     <div onClick={togglePlay}>{playing ? <PauseButton/> : <PlayButton/>}</div>
-                    <div><NextButton/></div>
+                    <div onClick={nextSong}><NextButton/></div>
                 </div>
             </div>
 
