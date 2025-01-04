@@ -2,6 +2,7 @@
 import type {Metadata} from "next";
 import "./globals.css";
 import {AlbumProvider} from "@/context/AlbumContext";
+import NavBar from "@/Sections/HeroSection/NavBar";
 
 export const metadata: Metadata = {
     title: "Fall Coming",
@@ -16,11 +17,14 @@ export default function RootLayout({
     return (
         <AlbumProvider>
         <html lang="en">
-        <body >
-        {children}
+        <body>
+        <div className={'mx-auto md:max-w-[85%] xl:max-w-[60%]'}>
+            <NavBar/>
+        </div>
+            {children}
 
         </body>
         </html>
         </AlbumProvider>
-    );
+);
 }
