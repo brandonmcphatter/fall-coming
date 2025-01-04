@@ -58,3 +58,11 @@ body {
 .coming {
     font-family: 'Silkscreen', sans-serif;
 }
+
+.modal {
+    backdrop-filter: blur(10px);
+}
+
+.navBlur {
+    backdrop-filter: blur(10px);
+}
