@@ -1,5 +1,5 @@
-import AlbumGrid from "@/Sections/MusicSection/AlbumGrid";
-import SectionTitle from "@/Sections/SectionTitle";
+import AlbumGrid from "@/components/MusicSection/AlbumGrid";
+import SectionTitle from "@/components/SectionTitle";
 import Link from "next/link";
 
 export default function MusicSection() {
