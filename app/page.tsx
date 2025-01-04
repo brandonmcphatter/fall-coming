@@ -1,18 +1,30 @@
 import HeroSection from "@/Sections/HeroSection/HeroSection";
 import MusicSection from "@/Sections/MusicSection/MusicSection";
-import NavBar from "@/Sections/HeroSection/NavBar";
+import BlogSection from "@/Sections/BlogSection/BlogSection";
+import MerchSection from "@/Sections/MerchSection/MerchSection";
 
 export default function Home() {
 
     return (
+        <>
             <div className={'mx-auto md:max-w-[85%] xl:max-w-[50%]'}>
                 <main className={'px-4 md:px-0 mb-20'}>
-                    <NavBar/>
                     <HeroSection/>
                     <MusicSection/>
+                    <BlogSection/>
+                    <MerchSection/>
                 </main>
             </div>
-    );
+
+            <footer>
+                <div className={''}>
+                    <main className={'px-4 md:px-0 mb-10  flex justify-center items-center'}>
+                        <div className={'text-xs fall'}>Fall Coming &copy; 2025</div>
+                    </main>
+                </div>
+            </footer>
+        </>
+);
 }
 
 
