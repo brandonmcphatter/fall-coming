@@ -2,10 +2,10 @@
 
 import 'animate.css'
 import React, {useContext} from "react";
-import AlbumView from "@/Sections/MusicPage/AlbumView";
-import AlbumItem from "@/Sections/MusicSection/AlbumItem";
+import AlbumView from "@/components/MusicPage/AlbumView";
+import AlbumItem from "@/components/MusicSection/AlbumItem";
 import {AlbumContext} from "@/context/AlbumContext";
-import MusicPlayerBar from "@/Sections/MusicSection/MusicPlayerBar";
+import MusicPlayerBar from "@/components/MusicSection/MusicPlayerBar";
 
 export default function MusicPage() {
 
