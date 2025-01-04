@@ -5,7 +5,7 @@ export default function HeroSection() {
         <section id={'hero'} className={'h-screen flex-col justify-center  content-center pb-24'}>
 
             {/*Main Text*/}
-            <div className={' flex flex-col lg:flex-row justify-center text-7xl md:text-8xl px-4  '}>
+            <div className={' flex flex-col lg:flex-row justify-center text-7xl md:text-8xl px-4  mb-6'}>
 
                 <div className={'text-center lg:pe-6 md:pe-72 animate__animated animate__fadeInDownBig animate__slower'}>
                     <span className={'coming'}>Fall</span>
