@@ -1,6 +1,5 @@
 'use client';
 
-import RegularNav from "@/Sections/RegularNav";
 import 'animate.css'
 import React, {useContext} from "react";
 import AlbumView from "@/Sections/MusicPage/AlbumView";
@@ -17,7 +16,7 @@ export default function MusicPage() {
             <div className={'mx-auto md:max-w-[85%] xl:max-w-[60%] min-h-screen'}>
 
                 <main className={'px-4 md:px-0 mb-20'}>
-                    <RegularNav/>
+
 
                     {/*All Music*/}
                     {albumChoice === -1 &&
