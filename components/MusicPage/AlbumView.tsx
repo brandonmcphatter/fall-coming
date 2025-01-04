@@ -14,7 +14,7 @@ export default function AlbumView() {
                 <button className={'border-2 py-1 rounded px-4  hover:border-orange-300 hover:text-orange-200 coming tracking-tight'} onClick={() => setAlbumChoice(-1)}>
                     &#60; All Music
                 </button>
-                    <button className={'border-2 py-1 rounded px-4  hover:border-orange-200 hover:text-orange-200 coming tracking-tight'}>
+                    <button disabled={true} className={'border-2 py-1 rounded px-4  hover:border-blue-200 hover:text-blue-200 coming tracking-tight'}>
                         Download
                     </button>
             </div>
