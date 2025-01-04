@@ -19,7 +19,7 @@ export default function NavBar() {
 
     return (
         <>
-        <nav className={' navBlur px-8 py-8 md:py-6 md:px-0 mx-auto animate__animated animate__slideInDown animate__slower animate__delay-4s fixed top-0 w-full z-50'}>
+        <nav className={' navBlur px-8 py-3.5 md:py-6 md:px-0 mx-auto animate__animated animate__slideInDown animate__slower animate__delay-4s fixed top-0 w-full z-50'}>
             <div className={' w-full md:hidden flex flex-col'}>
                 <div className={' md:hidden cursor-pointer flex justify-between'}>
                     <Link href={'/'} onClick={closeMenu}>
