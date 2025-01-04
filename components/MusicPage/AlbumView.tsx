@@ -11,10 +11,12 @@ export default function AlbumView() {
     return (
         <section id={'album'} className={'px-4 md:px0 py-4 min-h-screen animate__animated animate__fadeIn mb-32'}>
             <div className={'pt-2 pb-12 flex justify-between'}>
-                <button className={'border-2 py-1 rounded px-4  hover:border-orange-300 hover:text-orange-200 coming tracking-tight'}
-                        onClick={() => setAlbumChoice(-1)}>&#60; All Music
+                <button className={'border-2 py-1 rounded px-4  hover:border-orange-300 hover:text-orange-200 coming tracking-tight'} onClick={() => setAlbumChoice(-1)}>
+                    &#60; All Music
                 </button>
-                <button className={'border-2 py-1 rounded px-4  hover:border-orange-200 hover:text-orange-200 coming tracking-tight'}>Download</button>
+                    <button className={'border-2 py-1 rounded px-4  hover:border-orange-200 hover:text-orange-200 coming tracking-tight'}>
+                        Download
+                    </button>
             </div>
             <div className={'mx-auto text-gray-300 flex flex-col gap-6 '}>
 
