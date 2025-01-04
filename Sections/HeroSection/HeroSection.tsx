@@ -19,7 +19,7 @@ export default function HeroSection() {
             {/*Sub Text*/}
             <p className={'text-center italic tracking-wide animate__animated animate__zoomInUp animate__slower animate__delay-3s mb-40 fall'}>The Latest Content & Creations From Brandon Jamall</p>
 
-            <div className={'flex justify-center animate__animated animate__pulse animate__fadeIn animate__slower animate__delay-5s absolute bottom-9 right-1/2 mb-8'}>
+            <div className={'flex justify-center animate__animated animate__pulse animate__fadeIn animate__slower animate__delay-5s'}>
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-12">
                     <path fillRule="evenodd"
                           d="M11.47 13.28a.75.75 0 0 0 1.06 0l7.5-7.5a.75.75 0 0 0-1.06-1.06L12 11.69 5.03 4.72a.75.75 0 0 0-1.06 1.06l7.5 7.5Z"
