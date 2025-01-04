@@ -74,7 +74,7 @@ function TrackListItem({track, num, duration}: { track: string, num: number, dur
 function AlbumDescription() {
     return (
         <div className={'fall tracking-wide h-full flex justify-center'}>
-            <p className={'px-3 md:w-4/5'}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aut cum dolor,
+            <p className={'px-3 lg:px-0  xl:w-3/5'}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aut cum dolor,
                 eligendi excepturi
                 facilis iusto maiores maxime minima, minus modi natus nobis praesentium provident quia quod
                 reprehenderit rerum sit.</p>
@@ -85,7 +85,7 @@ function AlbumDescription() {
 function AlbumTitle({title}: { title: string }) {
     return (
         <div className={'flex justify-center w-full'}>
-            <span className={'coming text-5xl md:text-6xl '}>{title}</span>
+            <span className={'coming text-4xl md:text-6xl '}>{title}</span>
         </div>
     )
 }
