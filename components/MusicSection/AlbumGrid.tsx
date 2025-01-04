@@ -1,4 +1,4 @@
-import AlbumItem from "@/Sections/MusicSection/AlbumItem";
+import AlbumItem from "@/components/MusicSection/AlbumItem";
 import {albums} from "@/music";
 
 export default function AlbumGrid() {

@@ -1,4 +1,4 @@
-import SectionTitle from "@/Sections/SectionTitle";
+import SectionTitle from "@/components/SectionTitle";
 import Link from "next/link";
 
 export default function MerchSection() {

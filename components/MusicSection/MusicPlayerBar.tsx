@@ -3,7 +3,7 @@
 import {useContext, useRef, useState} from "react";
 import Image from "next/image";
 import {AlbumContext} from "@/context/AlbumContext";
-import {NextButton, PauseButton, PlayButton, PrevButton} from "@/Sections/MusicSection/MusicPlayerIcons";
+import {NextButton, PauseButton, PlayButton, PrevButton} from "@/components/Icons";
 
 
 export default function MusicPlayerBar() {
